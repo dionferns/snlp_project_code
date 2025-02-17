@@ -1,0 +1,73 @@
+[
+  {
+    "section_id": "1",
+    "title": "Definitions - Definition of Content",
+    "text": "All content or information, in any medium, provided by a party to the other party for use in conjunction with the performance of its obligations, including without limitation any text, music, sound, photographs, video, graphics, data, or software."
+  },
+  {
+    "section_id": "1",
+    "title": "Definitions - Definition of Co-Branded Site",
+    "text": "The website accessible through Domain Name, for the Services implemented by i-Escrow. The homepage of this website will visibly display both 2TheMart Marks and i-Escrow Marks."
+  },
+  {
+    "section_id": "1",
+    "title": "Definitions - Definition of Customers",
+    "text": "All users who access the Co-Branded Site."
+  },
+  {
+    "section_id": "1",
+    "title": "Definitions - Definition of Domain Name",
+    "text": "www.iescrow.com/2TheMart."
+  },
+  {
+    "section_id": "1",
+    "title": "Definitions - Definition of Escrow Services",
+    "text": "Services where an agent holds a buyer's money in trust until the buyer approves the delivered item, at which point the agent releases the payment to the seller."
+  },
+  {
+    "section_id": "2",
+    "subsection_id": "2.1",
+    "title": "Development and Implementation - Overview",
+    "text": "2TheMart will promote Services to its auction users (buyers and sellers), and i-Escrow shall develop the Co-Branded Site and Information Transfer Mechanism."
+  },
+  {
+    "section_id": "2",
+    "subsection_id": "2.2",
+    "title": "Development and Implementation - Initial Information Transfer Mechanism Development",
+    "text": "The parties shall negotiate in good faith to determine the operation of the Information Transfer Mechanism and document such operation and development fees in a Statement of Work (SOW)."
+  },
+  {
+    "section_id": "3",
+    "subsection_id": "3.1",
+    "title": "Promotion - Marketing Efforts",
+    "text": "After Launch Date, 2TheMart will widely promote the Services to auction users via auction emails, FAQ sections, and seller listing pages."
+  },
+  {
+    "section_id": "5",
+    "subsection_id": "5.1",
+    "title": "Payment - Advertising Fees",
+    "text": "i-Escrow shall pay 2TheMart advertising fees based on the number of Transaction Inquiries."
+  },
+  {
+    "section_id": "6",
+    "subsection_id": "6.1",
+    "title": "Rights and Standards - Content Usage",
+    "text": "2TheMart grants i-Escrow a worldwide, non-exclusive right to use 2TheMart Content for the Co-Branded Site."
+  },
+  {
+    "section_id": "7",
+    "title": "Disclaimer of Warranties",
+    "text": "Each party provides all materials and services to the other party 'as is' without warranties or conditions."
+  },
+  {
+    "section_id": "8",
+    "subsection_id": "8.1",
+    "title": "Term and Termination - Term",
+    "text": "The Agreement shall continue for one year following the Launch Date and may be renewed by mutual agreement."
+  },
+  {
+    "section_id": "Appendix A",
+    "title": "Escrow Services Description",
+    "text": "Successful completion of a transaction involves an exchange of merchandise with payment. i-Escrow holds payment from the buyer in trust until the seller ships the merchandise. Once the buyer accepts the merchandise, i-Escrow forwards the payment to the seller."
+  }
+]
