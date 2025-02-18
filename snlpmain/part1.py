@@ -8,7 +8,6 @@ import re
 # Load model
 # model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
 
-
 supported_models = {
     "sbert": "sentence-transformers/all-mpnet-base-v2",
     "distilled_sbert": "sentence-transformers/all-MiniLM-L6-v2",
@@ -24,7 +23,6 @@ def load_embedding_model(model_name):
     else:
         raise ValueError(f"Model '{model_name} not supported")
     
-
 
 def naive_chunking(text, chunk_size, overlap):
     "Function to chunk the text"
@@ -51,14 +49,11 @@ def get_embeddings(chunks, model_name):
         raise ValueError(f"Model '{model_name}' not supported.")
     
 
-
 # def embed_chunks(chunks):
 #     embeddings = model.encode(chunks, convert_to_numpy=True)
 #     return embeddings
 
-
-
-def save_chunks_to_txt(chunks, file_name, output_folder_txt,output_folder_json ):
+def save_chunks_to_txt(chunks, file_name,output_folder_json ):
     """
     Save chunked text to a specific folder.
 
@@ -68,42 +63,39 @@ def save_chunks_to_txt(chunks, file_name, output_folder_txt,output_folder_json )
     """
 
     # Ensure the output folder exists
-    os.makedirs(output_folder_txt, exist_ok=True)  # Creates folder if it doesn’t exist
+    # os.makedirs(output_folder_txt, exist_ok=True)  # Creates folder if it doesn’t exist
     os.makedirs(output_folder_json, exist_ok=True)  # Creates folder if it doesn’t exist
 
     # Define full file paths
-    text_file_path = os.path.join(output_folder_txt, f"{file_name}.txt")
+    # text_file_path = os.path.join(output_folder_txt, f"{file_name}.txt")
     json_file_path = os.path.join(output_folder_json, f"{file_name}.json")
 
     # Save text file
-    with open(text_file_path, "w", encoding="utf-8") as f:
-        for i, chunk in enumerate(chunks):
-            f.write(f"Chunk {i+1}:\n")
-            f.write(chunk + "\n\n")
-    print(f"Chunks saved in txt format: {text_file_path}")
+    # with open(text_file_path, "w", encoding="utf-8") as f:
+    #     for i, chunk in enumerate(chunks):
+    #         f.write(f"Chunk {i+1}:\n")
+    #         f.write(chunk + "\n\n")
+    # print(f"Chunks saved in txt format: {text_file_path}")
 
     # Save JSON file
     with open(json_file_path, "w", encoding="utf-8") as f:
         json.dump(chunks, f, indent=2)
 
-    print(f"Chunks saved in JSON format: {json_file_path}")
+    # print(f"Chunks saved in JSON format: {json_file_path}")
 
 
 def process_text_file(chunk_size, overlap):
-    # function to load all the files from a folder which are txt files.
-    # folder_path =  '/Users/raymonfernandes/Desktop/Dion_work/snlp_project_code/snlpmain/testtxtfiles'
 
     current_dir = os.path.abspath(os.path.dirname(__file__))  # Ensure absolute path
 
     folder_path = os.path.join(current_dir, "testtxtfiles")
 
-    txt_files = [f for f in os.listdir(folder_path) if f.endswith(".txt")]
-
+    text_files = [f for f in os.listdir(folder_path) if f.endswith(".txt")]
 
 
     chunk_data = []  # Initialize chunk_data before the loop
 
-    for filename in txt_files:
+    for filename in text_files:
         file_path = f'{folder_path}/{filename}'
 
         with open(file_path, "r", encoding="utf-8") as file:
@@ -117,35 +109,32 @@ def process_text_file(chunk_size, overlap):
                     for i, (chunk, embedding) in enumerate(zip(chunks, embeddings))]
         
         name = filename.removesuffix(".txt")
-        save_chunks_to_txt(chunks, name, 'chunkedtxt', 'chunkedjson')
+        save_chunks_to_txt(chunk_data, name, 'chunkedtxt', 'chunked_data')
     return chunk_data
-
-
-chunked_data = process_text_file(chunk_size=600, overlap=50)
 
 
 # Run this only if executing this file directly
 if __name__ == "__main__":
     chunked_data = process_text_file(chunk_size=600, overlap=50)
 
-    # Save chunked data for later use in similarity search
-    with open("chunked_embeddings.json", "w") as f:
-        json.dump(chunked_data, f, indent=2)
+    # # Save chunked data for later use in similarity search
+    # with open("chunked_embeddings.json", "w") as f:
+    #     json.dump(chunked_data, f, indent=2)
 
-    print(f"Chunking and embedding completed. Data saved to chunked_embeddings.json")
+    # print(f"Chunking and embedding completed. Data saved to chunked_embeddings.json")
 
         # Check for duplicate text chunks
-    unique_chunks = set()
-    duplicates = []
+    # unique_chunks = set()
+    # duplicates = []
 
-    for chunk in chunked_data:
-        text = chunk['text']
-        if text in unique_chunks:
-            duplicates.append(text)
-        else:
-            unique_chunks.add(text)
+    # for chunk in chunked_data:
+    #     text = chunk['text']
+    #     if text in unique_chunks:
+    #         duplicates.append(text)
+    #     else:
+    #         unique_chunks.add(text)
 
-    print(f"Found {len(duplicates)} duplicate chunks")
-    for d in duplicates[:5]:  # Print only first 5 to check
-        print(d)
+    # print(f"Found {len(duplicates)} duplicate chunks")
+    # for d in duplicates[:5]:  # Print only first 5 to check
+    #     print(d)
 

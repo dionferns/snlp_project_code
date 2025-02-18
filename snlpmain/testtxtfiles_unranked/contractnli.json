@@ -1,0 +1,30 @@
+{
+  "tests": [
+    {
+      "query": "Consider the Non-Disclosure Agreement between CopAcc and ToP Mentors; Does the document indicate that the Agreement does not grant the Receiving Party any rights to the Confidential Information?",
+      "snippets": [
+        {
+          "file_path": "contractnli/CopAcc_NDA-and-ToP-Mentors_2.0_2017.txt",
+          "span": [
+            11461,
+            11963
+          ],
+          "answer": "Any and all proprietary rights, including but not limited to rights to and in inventions, patent rights, utility models, copyrights, trademarks and trade secrets, in and to any Confidential Information shall be and remain with the Participants respectively, and Mentor shall not have any right, license, title or interest in or to any Confidential Information, except the limited right to review, assess and help develop such Confidential Information in connection with the Copernicus Accelerator 2017."
+        }
+      ],
+      "retrieved_chunks": [
+        {
+          "chunk_id_2": " mutual promises herein, the parties agree as follows:\n1. CONFIDENTIAL INFORMATION. The term “Confidential Information” as used herein means all nonpublic information relating to the Subject Matter that is disclosed by either party, its Affiliates (as defined below), or their agents (where applicable, collectively referred to as the “Disclosing Party”), directly or indirectly, in writing, orally or by inspection of premises or tangible objects to the other party (the “Recipient”) that is: (i) marked confidential or proprietary, or (ii) given the nature of the information or the circumstances s"
+        },
+        {
+          "chunk_id_1": " addenda to this Agreement.\nII. Such discussions may involve disclosure by one party to the other party of confidential, proprietary or trade secret information of its own or its licensors (“Confidential Information” as defined below), during the Period for Exchange of Information.\nIII. Both parties recognize the value of the Confidential Information and that it is in their mutual best interests to maintain the confidential, proprietary and secret nature of the Confidential Information.\nTHEREFORE, in consideration of the Subject Matter, and the mutual promises herein, the parties agree as foll"
+        },
+        {
+          "chunk_id_0": "MUTUAL NON-DISCLOSURE AGREEMENT\nBetween\nAND\nSubject Matter:\nEffective Date of Agreement: Period , 2017\nfor Exchange of Information: , 2017 to\nPeriod of Confidentiality:\nTHIS AGREEMENT is made as of the Effective Date of Agreement noted above, by and between the above parties.\nBACKGROUND:\nI. The parties desire to have discussions of or relating to the Subject Matter for the purposes of evaluating a possible business relationship between them (“Purpose”). The parties may extend the Subject Matter or add additional parties by executing one or more addenda to this Agreement.\nII. Such discussions m"
+        }
+      ],
+      "retrieved_chunks_unranked": [
+        {
+          "chunk_id": "chunk_id_2",
+          "text": " mutual promises herein, the parties agree as follows:\n1. CONFIDENTIAL INFORMATION. The term “Confidential Information” as used herein means all nonpublic information relating to the Subject Matter that is disclosed by either party, its Affiliates (as defined below), or their agents (where applicable, collectively referred to as the “Disclosing Party”), directly or indirectly, in writing, orally or by inspection of premises or tangible objects to the other party (the “Recipient”) that is: (i) marked confidential or proprietary, or (ii) given the nature of the information or the circumstances s",
+          "cross_encoder_score": 
